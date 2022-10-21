@@ -20,11 +20,7 @@ namespace CoffeeMachineAPI.Controllers
                 {
                     return this.StatusCode(StatusCodes.Status418ImATeapot, string.Empty);
                 }
-                CoffeeMachine machine = new()
-                {
-                    Message = "Your piping hot coffee is ready",
-                    Prepared = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssK")
-                };
+                CoffeeMachine machine = new();
                 return Ok(machine);
             }
             else
